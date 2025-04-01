@@ -321,15 +321,93 @@ function initContactPage() {
   });
 }
 
+//  ===== Trustees Page =====
+
+function initTrusteesPage() {
+  if (!document.querySelector(".team-grid")) return;
+
+  // Trustee data
+  const trustees = [
+    {
+      name: "Emmanuel Arinze",
+      position: "Founder & Creative Director",
+      image: "img/easy.png.jpg",
+      github: "https://github.com/Emmanuel-A-I/EasyTech101",
+      linkedin: "https://www.linkedin.com/in/easyworldtech",
+    },
+    {
+      name: "Ekenedilichukwu Obeta",
+      position: "Member",
+      image: "img/ekene.png",
+      github: "",
+      linkedin: "",
+    },
+    {
+      name: "Glory Akumma",
+      position: "Member",
+      image: "img/Giggle.png.jpg",
+      github: "https://github.com/Dewdrop-bee",
+      linkedin: "https://www.linkedin.com/in/glory-dew",
+    },
+    {
+      name: "Micheal Comfort Opeyemi",
+      position: "Member",
+      image: "img/yemi.jpeg",
+      github: "",
+      linkedin: "",
+    },
+    {
+      name: "Ekerette Ekanem",
+      position: "Member",
+      image: "img/ek.jpeg",
+      github: "",
+      linkedin: "http://linkedin.com/in/ekeretteekanem",
+    },
+    {
+      name: "Aor Imojime",
+      position: "Member",
+      image: "img/aoh.jpeg",
+      github: "https://github.com/Jamesaor1",
+      linkedin: "",
+    },
+  ];
+
+  // Render trustees
+  const trusteesContainer = document.querySelector(".team-grid");
+
+  console.log(trusteesContainer, "trusteesContainer");
+  if (trusteesContainer) {
+    trustees.forEach((trustee) => {
+      const trusteeHTML = `
+        <div class="team-member">
+          <div class="team-img">
+            <img src=${trustee.image} alt=${trustee.name} />
+          </div>
+          <h3>${trustee.name}</h3>
+          <p>${trustee.position}</p>
+          <div class="socials">
+            <div>
+              <a href=${trustee.github}><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div>
+              <a href=${trustee.linkedin}><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        `;
+      trusteesContainer.innerHTML += trusteeHTML;
+    });
+  }
+}
+
 // ===== Initialize All Pages =====
 document.addEventListener("DOMContentLoaded", () => {
-  // Shared initialization
   initMobileMenu();
   highlightActiveLink();
 
-  // Page-specific initialization
   initHomePage();
   initProductsPage();
   initEventsPage();
   initContactPage();
+  initTrusteesPage();
 });

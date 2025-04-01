@@ -29,7 +29,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
   line-height: 1.6;
-  background: #fff;
+  background: var(--bg-light);
   overflow-x: hidden;
 }
 
@@ -102,7 +102,7 @@ ul {
 }
 
 .logo img {
-  width: 150px;
+  width: 9rem;
   transition: var(--transition);
 }
 
@@ -460,6 +460,11 @@ nav ul li a:hover {
 .footer-col-2 {
   text-align: center;
   align-items: center;
+}
+
+.footer-col-2 img {
+  width: 100%;
+  max-width: 200px;
 }
 
 .app-logo {
