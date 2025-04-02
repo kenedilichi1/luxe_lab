@@ -314,6 +314,11 @@ nav ul li a:hover {
   font-size: 2rem;
 }
 
+.socials a:hover {
+  color: #000000;
+  transition: ease-in-out 0.8s;
+}
+
 /* ===== Events Page ===== */
 .events-list {
   padding: 40px 0;

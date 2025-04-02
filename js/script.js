@@ -339,7 +339,7 @@ function initTrusteesPage() {
       name: "Ekenedilichukwu Obeta",
       position: "Member",
       image: "img/ekene.png",
-      github: "",
+      github: "https://github.com/kenedilichi1",
       linkedin: "",
     },
     {
